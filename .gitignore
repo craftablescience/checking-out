@@ -1,9 +1,23 @@
-
 # Godot-specific ignores
-.import/
+.godot/
 export.cfg
 export_presets.cfg
 
 # Mono-specific ignores
 .mono/
 data_*/
+
+# Export
+build/
+
+# Trenchbroom
+!tools/
+
+tools/*
+!tools/trenchbroom/
+
+tools/trenchbroom/*
+!tools/trenchbroom/games/
+
+tools/trenchbroom/games/*
+!tools/trenchbroom/games/Godot

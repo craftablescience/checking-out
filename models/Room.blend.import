@@ -1,0 +1,159 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c4350chtd8hkd"
+path="res://.godot/imported/Room.blend-cf11778e642767a6802e8bee91417be8.scn"
+
+[deps]
+
+source_file="res://models/Room.blend"
+dest_files=["res://.godot/imported/Room.blend-cf11778e642767a6802e8bee91417be8.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"meshes": {
+"Room-cf11778e642767a6802e8bee91417be8_Cube002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://models/Room-cf11778e642767a6802e8bee91417be8_Cube002.res"
+},
+"Room-cf11778e642767a6802e8bee91417be8_Cube003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://models/Room-cf11778e642767a6802e8bee91417be8_Cube003.res"
+},
+"Room-cf11778e642767a6802e8bee91417be8_Cube004": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://models/Room-cf11778e642767a6802e8bee91417be8_Cube004.res"
+},
+"Room-cf11778e642767a6802e8bee91417be8_Cube005": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://models/Room-cf11778e642767a6802e8bee91417be8_Cube005.res"
+},
+"Room-cf11778e642767a6802e8bee91417be8_Cube006": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://models/Room-cf11778e642767a6802e8bee91417be8_Cube006.res"
+},
+"Room-cf11778e642767a6802e8bee91417be8_Cube007": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://models/Room-cf11778e642767a6802e8bee91417be8_Cube007.res"
+},
+"Room-cf11778e642767a6802e8bee91417be8_Cube008": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://models/Room-cf11778e642767a6802e8bee91417be8_Cube008.res"
+},
+"Room-cf11778e642767a6802e8bee91417be8_Cylinder": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://models/Room-cf11778e642767a6802e8bee91417be8_Cylinder.res"
+},
+"Room-cf11778e642767a6802e8bee91417be8_Cylinder002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://models/Room-cf11778e642767a6802e8bee91417be8_Cylinder002.res"
+},
+"Room-cf11778e642767a6802e8bee91417be8_Plane": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://models/Room-cf11778e642767a6802e8bee91417be8_Plane.res"
+}
+},
+"nodes": {
+"PATH:Smartphone-rigid": {
+"import/skip_import": true
+},
+"PATH:Toothbrush-rigid": {
+"import/skip_import": true
+}
+}
+}
+gltf/embedded_image_handling=1
+blender/nodes/visible=0
+blender/nodes/punctual_lights=true
+blender/nodes/cameras=true
+blender/nodes/custom_properties=true
+blender/nodes/modifiers=1
+blender/meshes/colors=false
+blender/meshes/uvs=true
+blender/meshes/normals=true
+blender/meshes/tangents=true
+blender/meshes/skins=2
+blender/meshes/export_bones_deforming_mesh_only=false
+blender/materials/unpack_enabled=true
+blender/materials/export_materials=1
+blender/animation/limit_playback=true
+blender/animation/always_sample=true
+blender/animation/group_tracks=true

@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://db1duq217tdfi"]
+
+[ext_resource type="PackedScene" uid="uid://c4350chtd8hkd" path="res://models/Room.blend" id="1_wn3dy"]
+[ext_resource type="Script" path="res://scripts/Furniture.gd" id="2_7321h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2tsj4"]
+size = Vector3(12, 1, 15)
+
+[node name="Furniture" instance=ExtResource("1_wn3dy")]
+script = ExtResource("2_7321h")
+
+[node name="Bed-rigid" parent="." index="0" groups=["SchoolOwned"]]
+
+[node name="Pillow-rigid" parent="." index="1" groups=["PlayerOwned"]]
+
+[node name="Blanket-rigid" parent="." index="2" groups=["PlayerOwned"]]
+
+[node name="Desk-rigid" parent="." index="3" groups=["SchoolOwned"]]
+
+[node name="Lamp-rigid" parent="." index="4" groups=["PlayerOwned"]]
+
+[node name="Laptop-rigid" parent="." index="5" groups=["PlayerOwned"]]
+
+[node name="Plant-rigid" parent="." index="6" groups=["PlayerOwned"]]
+
+[node name="Wardrobe-rigid" parent="." index="7" groups=["SchoolOwned"]]
+
+[node name="BedCopy-rigid" parent="." index="8" groups=["SchoolOwned"]]
+
+[node name="DeskCopy-rigid" parent="." index="9" groups=["SchoolOwned"]]
+
+[node name="WardrobeCopy-rigid" parent="." index="10" groups=["SchoolOwned"]]
+
+[node name="Teleport" type="Area3D" parent="." index="11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Teleport" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -5, -1.25)
+shape = SubResource("BoxShape3D_2tsj4")
+
+[connection signal="body_entered" from="Teleport" to="." method="_on_teleport_body_entered"]

@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci0isy4y115xn"]
+
+[ext_resource type="Script" path="res://scripts/Main.gd" id="1_6d5h8"]
+[ext_resource type="PackedScene" uid="uid://c4srnhdemjpl2" path="res://scenes/Room.tscn" id="1_ou5eh"]
+[ext_resource type="PackedScene" uid="uid://bkwwb30ptqbb7" path="res://scenes/Menu.tscn" id="2_83i0u"]
+[ext_resource type="Texture2D" uid="uid://3cvvb18xaj5s" path="res://textures/ui/crosshair.png" id="3_tloga"]
+
+[node name="Main" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6d5h8")
+
+[node name="Room" parent="." instance=ExtResource("1_ou5eh")]
+
+[node name="Crosshair" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.493
+anchor_top = 0.488
+anchor_right = 0.507
+anchor_bottom = 0.512
+offset_left = 8.06396
+offset_top = 7.77597
+offset_right = -8.06403
+offset_bottom = -7.776
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_tloga")
+
+[node name="Menu" parent="." instance=ExtResource("2_83i0u")]
+layout_mode = 1
+
+[node name="ScoreAcceptDialog" type="AcceptDialog" parent="."]
+title = "game complete"
+size = Vector2i(215, 161)
+ok_button_text = "ok then"
+dialog_text = "your score:
+%d / 5 items of your own
+%d / 6 items of the school
+overall: %s"
+
+[connection signal="end_game" from="Room" to="." method="_on_room_end_game"]
+[connection signal="reset_game" from="Menu" to="." method="_on_menu_reset_game"]
+[connection signal="resume_game" from="Menu" to="." method="_on_menu_resume_game"]

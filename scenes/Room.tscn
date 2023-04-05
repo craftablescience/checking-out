@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://c4srnhdemjpl2"]
+
+[ext_resource type="Script" path="res://scripts/Room.gd" id="1_cwtbe"]
+[ext_resource type="PackedScene" uid="uid://bm46i5pn5o46n" path="res://scenes/Player.tscn" id="4_xipv5"]
+
+[sub_resource type="Gradient" id="Gradient_rbmdg"]
+offsets = PackedFloat32Array(0.439815, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_xoxvn"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_wrt0r"]
+invert = true
+generate_mipmaps = false
+seamless = true
+seamless_blend_skirt = 0.4
+bump_strength = 4.0
+color_ramp = SubResource("Gradient_rbmdg")
+noise = SubResource("FastNoiseLite_xoxvn")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7cee1"]
+sky_top_color = Color(0.356863, 0.45098, 0.615686, 1)
+sky_horizon_color = Color(0.635294, 0.654902, 0.717647, 1)
+sky_cover = SubResource("NoiseTexture2D_wrt0r")
+ground_bottom_color = Color(0.12549, 0.12549, 0.176471, 1)
+ground_horizon_color = Color(0.627451, 0.65098, 0.74902, 1)
+
+[sub_resource type="Sky" id="Sky_8664c"]
+sky_material = SubResource("ProceduralSkyMaterial_7cee1")
+
+[sub_resource type="Environment" id="Environment_ne1k6"]
+background_mode = 2
+sky = SubResource("Sky_8664c")
+reflected_light_source = 2
+tonemap_mode = 3
+tonemap_exposure = 1.5
+sdfgi_use_occlusion = true
+glow_normalized = true
+volumetric_fog_density = 0.281
+volumetric_fog_gi_inject = 2.28
+volumetric_fog_ambient_inject = 0.91
+volumetric_fog_sky_affect = 0.391
+
+[node name="Room" type="Node3D"]
+process_mode = 1
+script = ExtResource("1_cwtbe")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ne1k6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.955803, 0.152496, -0.251368, 0.0825044, 0.681497, 0.727155, 0.282195, -0.715756, 0.638795, 1.60734, 4.98398, -0.346952)
+light_color = Color(1, 1, 0.921569, 1)
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="WorldSpawn" type="Node3D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("4_xipv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+floor_max_angle = 0.872665
+SPEED = 4.0
+HOLD_LERP_SPEED = 16
+
+[connection signal="end_game" from="Player" to="." method="_on_player_end_game"]
