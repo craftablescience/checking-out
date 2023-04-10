@@ -3145,7 +3145,7 @@ autowrap_mode = 2
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="TabContainer/Credits"]
 layout_mode = 2
-text = "all assets created between March 23rd and April 6th of 2023"
+text = "all assets created between March 23rd and April 9th of 2023"
 fit_content = true
 scroll_active = false
 autowrap_mode = 2

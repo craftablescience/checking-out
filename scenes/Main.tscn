@@ -36,6 +36,12 @@ texture = ExtResource("3_tloga")
 [node name="Menu" parent="." instance=ExtResource("2_83i0u")]
 layout_mode = 1
 
+[node name="EndGameConfirmationDialog" type="ConfirmationDialog" parent="."]
+title = "are you sure..."
+ok_button_text = "yes"
+dialog_text = "are you positive you got everything?"
+cancel_button_text = "no i'm not done!"
+
 [node name="ScoreAcceptDialog" type="AcceptDialog" parent="."]
 title = "game complete"
 size = Vector2i(215, 161)
@@ -48,3 +54,5 @@ overall: %s"
 [connection signal="end_game" from="Room" to="." method="_on_room_end_game"]
 [connection signal="reset_game" from="Menu" to="." method="_on_menu_reset_game"]
 [connection signal="resume_game" from="Menu" to="." method="_on_menu_resume_game"]
+[connection signal="canceled" from="EndGameConfirmationDialog" to="." method="_on_end_game_confirmation_dialog_canceled"]
+[connection signal="confirmed" from="EndGameConfirmationDialog" to="." method="_on_end_game_confirmation_dialog_confirmed"]

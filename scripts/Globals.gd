@@ -16,6 +16,7 @@ var is_main_menu := true
 var inside_end_zone := false # jank hack
 var player_collected := 0 # hack to avoid signals
 var school_collected := 0 # hack to avoid signals
+var elapsed_time := 0.0 # hack to avoid signals
 
 
 # settings

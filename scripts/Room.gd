@@ -31,7 +31,10 @@ func reset_game() -> void:
 	$Player.global_position = map_instance.get_node("Spawn").global_position
 	
 	map_instance.get_node("PreviewCamera").current = true
+	
+	$Stopwatch.start()
 
 
 func _on_player_end_game() -> void:
+	Globals.elapsed_time = $Stopwatch.elapsed_time
 	end_game.emit()

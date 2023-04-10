@@ -41,6 +41,7 @@ func _physics_process(delta: float) -> void:
 		var a: Vector3 = %PickupNode.get_global_transform().origin
 		var b: Vector3 = held.get_global_transform().origin
 		held.set_linear_velocity((a - b) * 10)
+		held.angular_damp = 2.0
 	
 	move_and_slide()
 
@@ -64,6 +65,7 @@ func _input(event: InputEvent) -> void:
 		if held_is_valid():
 			held.reparent(held_parent)
 			held.set_linear_velocity(get_real_velocity())
+			held.angular_damp = 0.0
 			held = null
 			held_parent = null
 		elif Globals.inside_end_zone:
@@ -85,6 +87,7 @@ func _input(event: InputEvent) -> void:
 			var dir = (%PickupNode.get_global_transform().origin - %RotationHelper.get_global_transform().origin).normalized()
 			held.reparent(held_parent)
 			held.set_linear_velocity(get_real_velocity() + dir * HOLD_THROW_SPEED)
+			held.angular_damp = 0.0
 			held = null
 			held_parent = null
 

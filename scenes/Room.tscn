@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4srnhdemjpl2"]
+[gd_scene load_steps=10 format=3 uid="uid://c4srnhdemjpl2"]
 
 [ext_resource type="Script" path="res://scripts/Room.gd" id="1_cwtbe"]
+[ext_resource type="Script" path="res://scripts/Stopwatch.gd" id="3_02aap"]
 [ext_resource type="PackedScene" uid="uid://bm46i5pn5o46n" path="res://scenes/Player.tscn" id="4_xipv5"]
 
 [sub_resource type="Gradient" id="Gradient_rbmdg"]
@@ -58,7 +59,10 @@ shadow_enabled = true
 [node name="Player" parent="." instance=ExtResource("4_xipv5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
 floor_max_angle = 0.872665
-SPEED = 4.0
+SPEED = 5.5
 HOLD_LERP_SPEED = 16
+
+[node name="Stopwatch" type="Node" parent="."]
+script = ExtResource("3_02aap")
 
 [connection signal="end_game" from="Player" to="." method="_on_player_end_game"]
